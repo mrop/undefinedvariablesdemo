@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.onehippo</groupId>
+    <artifactId>undefinedvariablesdemo</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>undefinedvariablesdemo-performancetests</artifactId>
+  <name>Undefined Variables Demo Performance Tests</name>
+  <description>Undefined Variables Demo Performance Tests</description>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <gatling.version>2.1.7</gatling.version>
+    <gatling-plugin.version>2.1.7</gatling-plugin.version>
+    <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.gatling.highcharts</groupId>
+      <artifactId>gatling-charts-highcharts</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>${scala-maven-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-maven-plugin</artifactId>
+        <version>${gatling-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>JITSimulation</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <simulationClass>org.onehippo.undefinedvariablesdemo.JITSimulation</simulationClass>
+            </configuration>
+          </execution>
+          <execution>
+            <id>DefinedSimulation</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <simulationClass>org.onehippo.undefinedvariablesdemo.DefinedVariablesSimulation</simulationClass>
+            </configuration>
+          </execution>
+          <execution>
+            <id>UndefinedSimulation</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <simulationClass>org.onehippo.undefinedvariablesdemo.UndefinedVariablesSimulation</simulationClass>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

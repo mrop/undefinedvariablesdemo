@@ -69,6 +69,9 @@
     <xalan.version>2.7.1</xalan.version>
     <junit.version>4.10</junit.version>
     <easymock.version>3.1</easymock.version>
+    <gatling.version>2.1.7</gatling.version>
+    <gatling-plugin.version>2.1.7</gatling-plugin.version>
+    <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
      
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
@@ -274,6 +277,7 @@
         <module>cms</module>
         <module>site</module>
         <module>essentials</module>
+        <!--<module>performance-tests</module>-->
       </modules>
     </profile>
 
