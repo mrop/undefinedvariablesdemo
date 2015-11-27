@@ -20,6 +20,6 @@ mvn clean install
 
 The results from a run on my machine ( Mac Book Pro, 2,5 GHz Intel Core i7, 16 GB 1600 MHz DDR3 ):
 
-* [Defined variables](./results/definedvariablessimulation-1448660262189/index.html)
-* [Undefined variables](./results/undefinedvariablessimulation-1448660371839/index.html)
+* [Defined variables](http://mrop.github.io/undefinedvariablesdemo/results/definedvariablessimulation-1448660262189/index.html)
+* [Undefined variables](http://mrop.github.io/undefinedvariablesdemo/results/undefinedvariablessimulation-1448660371839/index.html)
 
