@@ -18,11 +18,6 @@ class DefinedVariablesSimulation extends Simulation {
           .get("/site/defined"))
           .pause(7)
 
-  val undefined = scenario("UndefinedVariablesSimulation").exec(http("Undefined")
-          .get("/site/undefined"))
-          .pause(7)
-
-
   def steps(users:Int, s:Int) = (1 to users).toList.flatMap(i =>
     List(
       constantUsersPerSec(i) during(s seconds)
