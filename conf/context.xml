@@ -19,4 +19,6 @@
     <!--
     <Parameter name="output-wicketpaths" value="true"/>
     -->
+    <Loader loaderClass="org.apache.catalina.loader.ParallelWebappClassLoader"/>
+
 </Context>
