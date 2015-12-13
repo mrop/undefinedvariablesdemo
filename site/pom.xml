@@ -85,6 +85,11 @@
       <artifactId>hippo-plugin-selections-hst-client</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.onehippo</groupId>
+      <artifactId>reportundefinedvariables</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
       <scope>test</scope>

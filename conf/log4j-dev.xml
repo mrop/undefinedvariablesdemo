@@ -164,6 +164,9 @@
   </logger>
 
   <!-- more info wanted -->
+  <logger name="org.onehippo.reportundefinedvariables.reporter">
+    <level value="info"/>
+  </logger>
   <logger name="org.apache.jackrabbit.core.persistence.bundle">
     <level value="warn"/>
   </logger>
